@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](introduction.md)
+* [Introduction](intro.md)
 * [Principles](principles.md)
 * [Practices](practices.md)
   * [Organise](practices/organise.md)
