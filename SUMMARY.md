@@ -1,3 +1,6 @@
 # Table of contents
 
-* [Introduction](Introduction.md)
+* [Introduction](introduction.md)
+* [Principles](principles.md)
+* [Practices](practices.md)
+* [Contributors](contributors.md)

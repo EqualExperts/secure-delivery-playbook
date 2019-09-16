@@ -1,62 +1,4 @@
-## Principles
-
-Delivering secure software is about a lot more than just writing secure code. Security is not a product that can be purchased after development is complete, or a set of features that can be easily added on later: it’s an integral part of everything we build, balanced by risk.
-
-The following principles guide our everyday work and are the foundation of the practices we adopt.
-
-### Principle 1: Good Security is Collaborative
-
-[We deliver as a team of equals](https://www.equalexperts.com/our-people/our-values/). While we may work on a relatively small delivery team, we recognise that we play an important part of a much bigger team that has collective responsibility to the organisation. We must remember that the whole product delivery team is accountable and responsible for the software they create, while receiving support from Security Engineering. Security is not exclusively a technology problem; it requires cooperation and collaboration across disciplines, including product, engineering, security and other stakeholders.
-
-A successful software security initiative depends on strong collaboration between everyone involved, including Security Engineering, product and delivery teams, together with support from senior management.
-
-_“Security is everyone’s job now, not just the security team’s. With continuous integration and continuous deployment, all developers have to be security engineers, we move too fast for there to be time for reviews by the security team beforehand.”_
-
-_- Werner Vogels \(CTO, Amazon\)_
-
-### Principle 2: Good Security is Continuous
-
-In order to be effective, security should be a consideration during all activities involved in delivery, including:
-
-* Inception
-* Requirements gathering
-* Architecture and design
-* Development
-* Testing
-* Deployment
-* Operations
-* Decommissioning
-
-This means that we consider the security implications of the work we’re doing throughout delivery, rather than leaving it to the end. [We practice constant verification, not wishful thinking](https://www.equalexperts.com/our-people/our-values/?=1). Applied to security, this means we build security in right from the start with tests to verify the quality of what we’ve delivered; we don’t wait for a penetration test or security review just before release and hope for the best. We take steps to ensure that - as much as is possible - every iteration of the software is subject to the right level of security review, enabling the continuous delivery of secure software that creates value as early as possible. We aim to have completed all relevant security testing by the point that a feature is functionally ready for deployment.
-
-### Principle 3: Good Security is Contextual
-
-Security is a response to risks faced by the organisation. This means we must first understand those risks in order to respond appropriately. These risks can impact an organisation in many ways, such as:
-
-* Reduction in profitability \(either through direct customer loss, or failure to win new customers\)
-* Reputational damage
-* Financial damage \(regulatory fines or compensation of affected users\)
-* Regulatory non-compliance
-* Data / system compromise
-* Availability
-
-We balance the need for security to reduce risk alongside other organisational needs, such as:
-
-* Feature delivery
-* Performance
-* Operability
-* Usability
-* Accessibility
-
-This doesn’t mean we satisfy one organisational need at the expense of the others. It means we find the best balance of all of the competing priorities in order to deliver the most suitable product for the organisation. Where we recommend or implement a tradeoff, the process by which we arrived at this is made clear so that the organisation is aware of the risks and expected impact.
-
-### Principle 4: Good Security is Cumulative
-
-Security is best achieved in layers. Don’t rely on a single practice or tool to meet all your security needs, but instead adopt multiple complementary practices and tools to provide layers of protection.
-
-This ensures that if a single tool or process fails to identify a vulnerability, or a single control fails, there will be other layers of security to avoid compromise. No single tool, process or control provides complete security, which is why the cumulative effect of multiple layers of security is paramount.
-
-## Practices
+# Practices
 
 The practices in this guide have been divided into three areas: Organise, Build & Operate.
 
@@ -66,7 +8,7 @@ The practices in this guide have been divided into three areas: Organise, Build 
 
 ![](.gitbook/assets/1.png)
 
-### Where do I start?
+## Where do I start?
 
 The best approach is to start with the practices that have high impact and low effort.
 
@@ -76,9 +18,9 @@ The best approach is to start with the practices that have high impact and low e
 
 The best approach is to deliver the practices in the smallest possible incremental steps that provide immediate feedback. This approach provides immediate measurable value and is also useful to build confidence and demonstrate how improvements can be easily delivered without large expense.
 
-### Organise
+## Organise
 
-#### Scaling Security
+### Scaling Security
 
 **Embed Security Champions in all teams**
 
@@ -92,7 +34,7 @@ Working from the same physical location can confer advantages that are hard to r
 
 When an engagement spans multiple locations, technical security specialists should be available to meet delivery teams in person wherever possible.
 
-#### Vulnerability Management
+### Vulnerability Management
 
 **Monitor published vulnerabilities in third party products**
 
@@ -141,7 +83,7 @@ Most organisations require a formal security evaluation before adopting new prod
 
 Security Engineering should be actively involved in evaluating any third party suppliers & products. This should not be seen as a yes/no assessment, but rather as a way to highlight potential weaknesses and recommend approaches to mitigate that risk.
 
-#### Incident Response
+### Incident Response
 
 **Plan and rehearse incident response activities**
 
@@ -159,7 +101,7 @@ When a security incident arises, teams across the organisation should collaborat
 
 Engaging the delivery team is an important opportunity to learn and improve the security of future product delivery. We should use blameless post-mortems to share learnings more widely within the organisation. A culture of open information sharing around security incidents will lead to greater risk reduction to the organisation, as teams are better informed and motivated to avoid similar incidents in the future.
 
-#### Training
+### Training
 
 **Provide role-specific training**
 
@@ -178,7 +120,7 @@ Delivery teams don’t always have the experience or skills required to address 
 
 Security Engineering should also be available to conduct or facilitate threat modelling sessions, and use this as an opportunity to teach this skill to others.
 
-#### Compliance & Policy
+### Compliance & Policy
 
 **Understand compliance context**
 
@@ -197,7 +139,7 @@ Examples of automated tooling include:
 * [Datree](https://datree.io/)
 * [Open Policy Agent](https://www.openpolicyagent.org/)
 
-#### Intelligence
+### Intelligence
 
 **Make security visible in the software catalogue**
 
@@ -219,9 +161,9 @@ Examples of other companies that have done this publicly:
 * [Parity hacked via security bug introduced during refactoring](https://www.parity.io/the-multi-sig-hack-a-postmortem/)
 * [Insider bitcoin theft from ShapeShift](http://moneyandstate.com/looting-of-the-fox/)
 
-### Build
+## Build
 
-#### Inception
+### Inception
 
 This is an early opportunity to identify security requirements and areas of risk before development gets underway. The main objective of inception is to de-risk delivery. Inception should include the delivery team and stakeholders to ensure everyone understands the part they play in delivering a secure product.
 
@@ -272,7 +214,7 @@ Examples:
 * [OWASP Application Security Verification Standard \(ASVS\)](https://github.com/OWASP/ASVS)
 * [Core Infrastructure Initiative Best Practices Criteria](https://github.com/coreinfrastructure/best-practices-badge/blob/master/doc/criteria.md#security)
 
-#### Stories & Epics
+### Stories & Epics
 
 **Consider security needs on every story or epic**
 
@@ -294,7 +236,7 @@ Some code has a higher impact on the security of the product, such as code handl
 
 Sections of security-critical code should be reviewed by experienced Security Engineers. It is possible to integrate this into source control to prevent security-critical code from being merged until it has been reviewed, for example by tagging associated stories. Alternatively, this can also be achieved by having a good close working relationship with Security Engineers so they are aware and available to help when needed.
 
-#### Security in the Pipeline
+### Security in the Pipeline
 
 **Avoid using sensitive production data in test environments**
 
@@ -435,7 +377,7 @@ In other cases, we may identify security issues that need to be fixed, but are n
 
 Automating these policies helps direct delivery teams towards the issues they are required to fix prior to a production release, and still highlights other issues that also need to be addressed although less urgently.
 
-#### Periodic Review
+### Periodic Review
 
 **Get an independent perspective on the product delivery**
 
@@ -459,9 +401,9 @@ Where you’re required to provide evidence to auditors for compliance \(e.g. PC
 
 When providing evidence in this form, it provides value to the delivery team as well as auditors \(e.g. Terraform scripts that show firewall configuration for PCI DSS\). This avoids creating lengthy documents that require continual effort to maintain, and instead relies on code that defines the way the system works. This also avoids contradiction between what the documentation says and what happens in reality.
 
-### Operate
+## Operate
 
-#### Environment Provisioning
+### Environment Provisioning
 
 **Automate infrastructure hardening**
 
@@ -531,7 +473,7 @@ It should only be possible to deploy software that has been produced through the
 
 The pipeline gives repeatability, traceability and an audit of all changes that have made all the way through to production. It ensures that all the necessary due diligence, such as security and functional testing, has been completed successfully to avoid issues being introduced into production. This is particularly important under emergency scenarios where there’s pressure to release rapid fixes, because this same pressure increases the chance of introducing vulnerabilities or defects.
 
-#### Security of the Pipeline
+### Security of the Pipeline
 
 The pipeline produces the product artefacts that are deployed into production. In order to trust that these artefacts have been correctly produced without vulnerabilities or malicious code being introduced, the security of the pipeline needs to be as good as the security of the product itself.
 
@@ -559,7 +501,7 @@ The principle of least privilege should be applied for secrets \(e.g. read only 
 
 Be aware that secrets may be accidentally or intentionally exposed via build logs, and mechanisms should be put in place to detect this or prevent it from happening if possible.
 
-#### Security Testing in Production
+### Security Testing in Production
 
 **Automate production vulnerability scanning**
 
@@ -617,7 +559,7 @@ Examples:
 * [Bugcrowd](https://www.bugcrowd.com/)
 * [Security.txt](https://securitytxt.org/)
 
-#### Detection & Response
+### Detection & Response
 
 **Centralise monitoring and alerting**
 
@@ -642,21 +584,3 @@ Examples:
 * [Thinkst Canary](https://canary.tools/)
 * [Canarytokens](https://canarytokens.org/generate)
 * [CyberChaff](https://galois.com/project/cyberchaff/)
-
-##
-
-## Contributors
-
-This document was produced by a number of people within the [Equal Experts network](https://www.equalexperts.com/our-people/our-network/), including:
-
-* [Stuart Gunter](https://www.linkedin.com/in/stuartgunter/)
-* [James Bloom](https://www.linkedin.com/in/jamesdbloom/)
-* [Phil Parker](https://www.linkedin.com/in/parkerphil/)
-* [Alun Coppack](https://www.linkedin.com/in/aluncoppack/)
-* [Dan Mitchell](https://www.linkedin.com/in/daniel-mitchell-b33b6b8/)
-* [Daniel Gartmann](https://www.linkedin.com/in/danielgartmann)
-* [Chris Rutter](https://www.linkedin.com/in/chris-rutter-1b74a8b0/)
-* [Gerald Benischke](https://www.linkedin.com/in/gerald-benischke-9811b663/)
-* [Katarzyna Kittel](https://www.linkedin.com/in/kasiakittel/)
-
-1.
