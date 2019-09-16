@@ -6,7 +6,7 @@ The practices in this guide have been divided into three areas: Organise, Build 
 
 **Build** and **Operate** practices are owned by the product delivery team and focus on security activities during development and live operations of the product.
 
-![](.gitbook/assets/1.png)
+![](images/organise-build-operate.png)
 
 ## Where do I start?
 
