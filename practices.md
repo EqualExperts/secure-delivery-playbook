@@ -14,7 +14,7 @@ The best approach is to start with the practices that have high impact and low e
 
 **Impact:** To understand the impact of a practice, we need a high level view of the context of the product. This includes: what value the product brings to the company, the sensitivity of data the product handles, the impact of a breach or compromise to the product and any regulatory requirements that must be met.
 
-**Effort:** To understand the effort of a practice, we must understand the context of the product delivery. This includes: the technologies used in the product, the delivery team’s skill and experience, the level of automation in the deployment pipeline and other teams involved in the delivery process \(i.e. change control\).
+**Effort:** To understand the effort of a practice, we must understand the context of the product delivery. This includes: the technologies used in the product, the delivery team's skill and experience, the level of automation in the deployment pipeline and other teams involved in the delivery process \(e.g. change control\).
 
 The best approach is to deliver the practices in the smallest possible incremental steps that provide immediate feedback. This approach provides immediate measurable value and is also useful to build confidence and demonstrate how improvements can be easily delivered without large expense.
 
@@ -55,21 +55,21 @@ In order to respond to identified vulnerabilities effectively, a process should 
 
 **Promote visibility and transparency**
 
-In some organisations, security is kept behind closed doors and not readily shared with delivery teams. This leads to a complicated relationship between security and delivery, as delivery teams aren’t given sufficient information to adequately address security issues. A common example of this problem is when security logs are sent to a separate SIEM \(Security Information and Event Management\) tool that isn’t made available to the teams that are responsible for the software being monitored.
+In some organisations, security is kept behind closed doors and not readily shared with delivery teams. This leads to a complicated relationship between security and delivery, as delivery teams aren't given sufficient information to adequately address security issues. A common example of this problem is when security logs are sent to a separate SIEM \(Security Information and Event Management\) tool that isn't made available to the teams that are responsible for the software being monitored.
 
 Security engineers should work openly and collaboratively with delivery teams at all times, ensuring that security logs and metrics are visible to everyone involved in delivery. This can be achieved through dashboards in observability tools and sharing access to all security operations data in real time with delivery teams. After every incident, a blameless post-mortem should be conducted \(including all relevant representatives\) to identify areas for improvement. These improvements should be shared with the rest of the organisation to ensure it also benefits.
 
 **Encourage effective use of penetration testing**
 
-Penetration testing is an opportunity to identify security issues. It’s most effective when the testing is goal focused \(i.e. steal sensitive data\) and the tester works in conjunction with the team, explaining issues as they’re discovered and providing recommendations on how to fix the issue. This gives the opportunity for the team to fix some issues during the penetration test, and ensures that the final report is well understood. It is least effective when only a vulnerability scan is performed, as that could be automated in the delivery pipeline instead.
+Penetration testing is an opportunity to identify security issues. It's most effective when the testing is goal focused \(i.e. steal sensitive data\) and the tester works in conjunction with the team, explaining issues as they're discovered and providing recommendations on how to fix the issue. This gives the opportunity for the team to fix some issues during the penetration test, and ensures that the final report is well understood. It is least effective when only a vulnerability scan is performed, as that could be automated in the delivery pipeline instead.
 
 Penetration testing is a useful indicator of the success of the practices in Build & Operate.
 
 **Manage external security researchers & bug bounties**
 
-Some organisations operate bug bounty schemes to encourage independent security researchers to help identify and fix security issues. Regardless of whether you operate a bug bounty, external security researchers expect all companies to provide a well signposted security contact where they can disclose vulnerabilities they’ve discovered.
+Some organisations operate bug bounty schemes to encourage independent security researchers to help identify and fix security issues. Regardless of whether you operate a bug bounty, external security researchers expect all companies to provide a well signposted security contact where they can disclose vulnerabilities they've discovered.
 
-Poor handling of disclosed vulnerabilities can lead to uncontrolled public disclosure and bad publicity. Good handling of this can lead to substantial security improvements at a very low cost. That’s why organisations need to cultivate good relationships with security researchers, ensuring they’re paid promptly, kept informed and not treated with suspicion. Publishing a vulnerability disclosure policy so that security researchers have clear expectations about the disclosure process can be helpful.
+Poor handling of disclosed vulnerabilities can lead to uncontrolled public disclosure and bad publicity. Good handling of this can lead to substantial security improvements at a very low cost. That's why organisations need to cultivate good relationships with security researchers, ensuring they're paid promptly, kept informed and not treated with suspicion. Publishing a vulnerability disclosure policy so that security researchers have clear expectations about the disclosure process can be helpful.
 
 Examples:
 
@@ -87,7 +87,7 @@ Security Engineering should be actively involved in evaluating any third party s
 
 **Plan and rehearse incident response activities**
 
-Every organisation should have a comprehensive approach to incident response so that it can be ready when something goes wrong. Modern data protection laws and regulations also require an active approach to incident response \(i.e. breach detection and notification requirements in GDPR\). For incident response plans to be valuable they need to be regularly tested, including all parts of the organisation, to ensure the organisation as a whole is able to respond under pressure. For example, GDPR gives only 72 hours to determine whether a breach should be reported to the ICO \(Information Commissioner’s Office\).
+Every organisation should have a comprehensive approach to incident response so that it can be ready when something goes wrong. Modern data protection laws and regulations also require an active approach to incident response \(i.e. breach detection and notification requirements in GDPR\). For incident response plans to be valuable they need to be regularly tested, including all parts of the organisation, to ensure the organisation as a whole is able to respond under pressure. For example, GDPR gives only 72 hours to determine whether a breach should be reported to the ICO \(Information Commissioner's Office\).
 
 Security Engineers should be actively involved in defining the incident response plans and following these plans when an incident occurs. The incident response plans must be tested and rehearsed to ensure they address the risk faced by the organisation adequately. This can be achieved through approaches such as tabletop exercises, chaos engineering, and red/blue or purple team exercises that allow teams to identify how they respond under pressure in critical situations. The Security Engineering team must involve stakeholders across the organisation \(e.g. customer relations, PR, legal, engineering, etc.\) to ensure all parties know their role and are ready to assist when required.
 
@@ -105,7 +105,7 @@ Engaging the delivery team is an important opportunity to learn and improve the 
 
 **Provide role-specific training**
 
-Each individual on a delivery team has a part to play, and should understand how security applies in their context. Although it may appear that security training should be focused on software engineers, it’s important to provide training for all roles in a team including developer / engineering, BAs, POs, DLs, etc. For example, a Product Owner should understand the risk that the product is exposed to without appropriate security controls, and should be empowered to challenge security requirements that are not well defined.
+Each individual on a delivery team has a part to play, and should understand how security applies in their context. Although it may appear that security training should be focused on software engineers, it's important to provide training for all roles in a team including developer / engineering, BAs, POs, DLs, etc. For example, a Product Owner should understand the risk that the product is exposed to without appropriate security controls, and should be empowered to challenge security requirements that are not well defined.
 
 Examples:
 
@@ -116,7 +116,7 @@ Examples:
 
 **Provide specialist consulting to teams**
 
-Delivery teams don’t always have the experience or skills required to address more specialist areas of security. This leads to suboptimal solutions or increased risk or complexity. Security Engineering should provide specialists in order to assist delivery teams when the team lacks the skills to complete a particular feature \(for example when implementing features that require cryptography\).
+Delivery teams don't always have the experience or skills required to address more specialist areas of security. This leads to suboptimal solutions or increased risk or complexity. Security Engineering should provide specialists in order to assist delivery teams when the team lacks the skills to complete a particular feature \(for example when implementing features that require cryptography\).
 
 Security Engineering should also be available to conduct or facilitate threat modelling sessions, and use this as an opportunity to teach this skill to others.
 
@@ -124,7 +124,7 @@ Security Engineering should also be available to conduct or facilitate threat mo
 
 **Understand compliance context**
 
-It’s important to understand where compliance requirements originate from so that appropriate controls can be put in place. Excessive controls can negatively impact productivity or encourage teams to work around them in order to complete their work. It can also increase time to market and overall cost of delivery. Insufficient controls can leave the organisation exposed to risk, potentially resulting in fines or other sanctions from regulators. Therefore it’s critical to ensure that the principles behind the compliance requirements are well understood so that they can be efficiently adapted to the organisation.
+It's important to understand where compliance requirements originate from so that appropriate controls can be put in place. Excessive controls can negatively impact productivity or encourage teams to work around them in order to complete their work. It can also increase time to market and overall cost of delivery. Insufficient controls can leave the organisation exposed to risk, potentially resulting in fines or other sanctions from regulators. Therefore it's critical to ensure that the principles behind the compliance requirements are well understood so that they can be efficiently adapted to the organisation.
 
 **Enforce policy as code**
 
@@ -187,15 +187,15 @@ Knowing this at the start of the delivery will ensure that the team understands 
 
 **Understand the shared responsibility model**
 
-The team should understand the shared responsibility model between the product and any services they’re using, whether they’re internal services \(e.g. a centrally managed Kubernetes cluster or PaaS\) or external cloud services.
+The team should understand the shared responsibility model between the product and any services they're using, whether they're internal services \(e.g. a centrally managed Kubernetes cluster or PaaS\) or external cloud services.
 
-The overall accountability for security of the product falls on the delivery team. They’re accountable for ensuring any services they rely on meet their security needs, even those they’re not responsible for. For example, the delivery team may be accountable for their choice of cloud provider, even though they’re not responsible for implementing the cloud provider’s data-center security controls. Where it’s not clear under a shared responsibility model that a particular area is being covered \(e.g. VM hardening\), the team needs to take ownership to ensure that is covered. This ensures the team is aware of their responsibilities for securing the product and the need to ensure these responsibilities are assigned within the team. If any of the responsibilities can’t be assigned within the roles in the delivery team, the team should be fully supported by Security Engineering so it can deliver the expected level of security.
+The overall accountability for security of the product falls on the delivery team. They're accountable for ensuring any services they rely on meet their security needs, even those they're not responsible for. For example, the delivery team may be accountable for their choice of cloud provider, even though they're not responsible for implementing the cloud provider's data-center security controls. Where it's not clear under a shared responsibility model that a particular area is being covered \(e.g. VM hardening\), the team needs to take ownership to ensure that is covered. This ensures the team is aware of their responsibilities for securing the product and the need to ensure these responsibilities are assigned within the team. If any of the responsibilities can't be assigned within the roles in the delivery team, the team should be fully supported by Security Engineering so it can deliver the expected level of security.
 
 **Produce an architectural threat model**
 
-Threat modelling is a useful activity for examining what we’re going to build and what could go wrong. This should begin during inception, before any software has been built, and [continue throughout the life of the product](). Threat modelling helps to identify areas of risk, and consequently the potential controls or design changes that the organisation feels are needed. This brings security issues to light early on, allowing them to be more easily factored into architectural decisions before they’ve been implemented.
+Threat modelling is a useful activity for examining what we're going to build and what could go wrong. This should begin during inception, before any software has been built, and [continue throughout the life of the product](). Threat modelling helps to identify areas of risk, and consequently the potential controls or design changes that the organisation feels are needed. This brings security issues to light early on, allowing them to be more easily factored into architectural decisions before they've been implemented.
 
-The architectural threat model provides an overview of the high-level threats and risks for the whole product. There’s value in keeping this up to date as the architecture evolves, so that the overall product risk can be easily understood and managed.
+The architectural threat model provides an overview of the high-level threats and risks for the whole product. There's value in keeping this up to date as the architecture evolves, so that the overall product risk can be easily understood and managed.
 
 **Include security in Definition of Done**
 
@@ -205,7 +205,7 @@ The delivery team should agree how they will include security in their DoD. For 
 
 **Explicitly identify security requirements**
 
-Threat models are helpful to identify areas of risk within the product we’re building and the controls required to address these risks. However, this alone is insufficient as it doesn’t capture external influences such as organisational policy or legislation. For example, data retention requirements wouldn’t likely be highlighted by a threat model, but are often required for compliance with internal policies or legislation such as GDPR.
+Threat models are helpful to identify areas of risk within the product we're building and the controls required to address these risks. However, this alone is insufficient as it doesn't capture external influences such as organisational policy or legislation. For example, data retention requirements wouldn't likely be highlighted by a threat model, but are often required for compliance with internal policies or legislation such as GDPR.
 
 Explicitly identifying these requirements early on ensures the team is aware of what needs to be built before committing to a particular design. This allows for the greatest flexibility in determining how best to meet those needs.
 
@@ -224,7 +224,7 @@ The Security Champion should be responsible for ensuring that security is consid
 
 **Iterative and incremental threat modelling**
 
-We should do threat modelling whenever there’s a significant change to the product. When creating epics and stories, we must consider whether the architectural threat model needs to be updated or whether there needs to be a specific threat model created for this change. The objective is to identify whether any security controls need to change or be added to maintain the security of the product.
+We should do threat modelling whenever there's a significant change to the product. When creating epics and stories, we must consider whether the architectural threat model needs to be updated or whether there needs to be a specific threat model created for this change. The objective is to identify whether any security controls need to change or be added to maintain the security of the product.
 
 Creating threat models in response to each change ensures the activity is focused. Consider timeboxing threat modelling activity to ensure maximum effectiveness - teams are more likely to continue with this practice if it is not too time consuming.
 
@@ -242,7 +242,7 @@ Sections of security-critical code should be reviewed by experienced Security En
 
 Often the easiest way of obtaining a set of representative test data is to take a copy of a production database. When we use a copy of sensitive production in a test environment, this environment needs the same level of security controls as the environment where it was designed to be stored. These controls increase the financial and operational cost of running a test environment, which is why it's often significantly cheaper and easier to operate a system with fake or reliably anonymised test data.
 
-When integrating with third parties that don’t provide a test environment or test accounts, suitable controls need to be put in place to ensure that access to that data is adequately protected. Ideally, a requirement should be raised for the third party to provide either a test environment or a test account that does not expose sensitive data.
+When integrating with third parties that don't provide a test environment or test accounts, suitable controls need to be put in place to ensure that access to that data is adequately protected. Ideally, a requirement should be raised for the third party to provide either a test environment or a test account that does not expose sensitive data.
 
 **Avoid leaking sensitive data in source control**
 
@@ -275,11 +275,11 @@ When building any product feature, we always write accompanying tests to prove t
 
 To ensure that builds are repeatable and their dependencies come from known good locations, they should be isolated from each other and prevented from sharing state. For example, this can be achieved using ephemeral build slaves or running builds within independent Docker containers.
 
-When a build is based on some shared state \(e.g. local Maven cache\), it’s possible that a previous build or anyone with access to the build server can pollute the Maven cache with malicious code that could then be packaged into your artefact.
+When a build is based on some shared state \(e.g. local Maven cache\), it's possible that a previous build or anyone with access to the build server can pollute the Maven cache with malicious code that could then be packaged into your artefact.
 
 **Security analysis on every build**
 
-Continuous Integration / Continuous Delivery \(CI/CD\) pipelines provide a good opportunity to detect potential security vulnerabilities early in development by integrating with security analysis tools. There are numerous open source and commercial products covering a wide variety of languages and frameworks, and it’s possible to write custom tools based on your own needs. These tools can be applied to application code, configuration files, Dockerfiles, Infrastructure-as-Code, and running applications.
+Continuous Integration / Continuous Delivery \(CI/CD\) pipelines provide a good opportunity to detect potential security vulnerabilities early in development by integrating with security analysis tools. There are numerous open source and commercial products covering a wide variety of languages and frameworks, and it's possible to write custom tools based on your own needs. These tools can be applied to application code, configuration files, Dockerfiles, Infrastructure-as-Code, and running applications.
 
 Results from these tests should [feed into the software catalogue]() to promote visibility and ensure that security vulnerabilities are being responded to in a timely manner.
 
@@ -304,7 +304,7 @@ Examples:
 
 Dynamic analysis inspects the inputs and outputs of your running application to identify vulnerabilities that are visible when using an application. Dynamic analysis can easily identify issues such as common security-related HTTP headers and markup issues. However, it is typically less effective at detecting SQL injection or command injection attacks because it has to rely on heuristics, unlike static analysis which has full visibility of the source code.
 
-Dynamic analysis can be relatively easily embedded in passive mode alongside existing integration tests, allowing it to detect security issues without significant investment. Active mode can also be considered to see how the application responds to known malicious inputs. However, active mode may not identify additional vulnerabilities that static analysis hasn’t already detected.
+Dynamic analysis can be relatively easily embedded in passive mode alongside existing integration tests, allowing it to detect security issues without significant investment. Active mode can also be considered to see how the application responds to known malicious inputs. However, active mode may not identify additional vulnerabilities that static analysis hasn't already detected.
 
 Examples:
 
@@ -327,7 +327,7 @@ Examples:
 
 Dependency checking \(also known as source composition analysis, SCA\) looks for known vulnerabilities and license issues in third party dependencies.
 
-Third-party dependencies in applications and the underlying container or virtual machine can introduce vulnerabilities into the product. Every build should use the latest available vulnerability information to check that it’s not producing an artefact that contains known vulnerabilities or licenses that conflict with organisational policy \(e.g. GPL\).
+Third-party dependencies in applications and the underlying container or virtual machine can introduce vulnerabilities into the product. Every build should use the latest available vulnerability information to check that it's not producing an artefact that contains known vulnerabilities or licenses that conflict with organisational policy \(e.g. GPL\).
 
 Free tools are available that can meet this need. However, commercial products exist that leverage a more comprehensive set of vulnerability data than what can be found in public sources such as [NIST NVD](https://nvd.nist.gov/) \(National Vulnerability Database\), and are often more accurate in matching CVEs to dependencies.
 
@@ -344,7 +344,7 @@ Examples:
 
 Delivery teams produce a number of different types of artefacts that need to be deployed. It is important to ensure that the artefacts are available to be deployed on demand. This reduces the likelihood of downtime and ensures we can recover from failure.
 
-It’s also important to ensure that the same artefact is consistently deployable across different environments: for example, we should only deploy the exact artefact that was tested, and not a separately built copy of the artefact. This guarantees that any dependencies have not changed since the artefact was tested \(e.g. when depending on ‘latest’ versions\).
+It's also important to ensure that the same artefact is consistently deployable across different environments: for example, we should only deploy the exact artefact that was tested, and not a separately built copy of the artefact. This guarantees that any dependencies have not changed since the artefact was tested \(e.g. when depending on ‘latest' versions\).
 
 **Ensure provenance of first-party artefacts**
 
@@ -358,9 +358,9 @@ Another approach is to sign artefacts and verify these signatures whenever an ar
 
 Using third-party components is essential in software delivery. However, this can potentially introduce vulnerabilities.
 
-When selecting a third party component to use, you should evaluate the trustworthiness of the artefact and its author. This includes an assessment of both the author and the artefact itself, including their reputation, how well they test the artefact, how well they protect their user accounts, and whether there’s a strong community supporting or using it. For example, using a Docker image produced by an unknown individual is problematic, as you have no evidence to suggest the person has the skills or motivation not to introduce vulnerabilities.
+When selecting a third party component to use, you should evaluate the trustworthiness of the artefact and its author. This includes an assessment of both the author and the artefact itself, including their reputation, how well they test the artefact, how well they protect their user accounts, and whether there's a strong community supporting or using it. For example, using a Docker image produced by an unknown individual is problematic, as you have no evidence to suggest the person has the skills or motivation not to introduce vulnerabilities.
 
-Once you’ve established that the author and artefact are suitable, then you need to establish the provenance of the artefact. This can be gained through confidence in the security and access control of the repository the artefact comes from. Alternatively, or in addition, signed artefacts can provide assurance in the provenance of the artefact when the signature is validated. An example of this is [Docker Content Trust](https://docs.docker.com/engine/security/trust/content_trust/).
+Once you've established that the author and artefact are suitable, then you need to establish the provenance of the artefact. This can be gained through confidence in the security and access control of the repository the artefact comes from. Alternatively, or in addition, signed artefacts can provide assurance in the provenance of the artefact when the signature is validated. An example of this is [Docker Content Trust](https://docs.docker.com/engine/security/trust/content_trust/).
 
 Examples of where this has caused problems:
 
@@ -369,7 +369,7 @@ Examples of where this has caused problems:
 
 **Automate pipeline progression based on policy**
 
-As we begin to introduce security checks into the pipeline, it’s important that we know when to fail the build and when to allow it through. This requires an up-front decision about policy and ensuring that the security checks are configured to meet that policy.
+As we begin to introduce security checks into the pipeline, it's important that we know when to fail the build and when to allow it through. This requires an up-front decision about policy and ensuring that the security checks are configured to meet that policy.
 
 In some cases, we can detect critical security issues that should prevent the build from progressing any further until they have been addressed. For example, identifying a critical vulnerability in a dependency can be one of the first steps in a build. This is analogous to a failing unit test that can be picked up very early.
 
@@ -381,9 +381,9 @@ Automating these policies helps direct delivery teams towards the issues they ar
 
 **Get an independent perspective on the product delivery**
 
-Sometimes we can get a bit too close to the detail to see the issues we need to address. A second opinion from someone we trust and respect can help validate our decisions, assumptions and designs. Explaining our solution to someone else often helps us better understand our own product. These independent reviews shouldn’t be seen as a gate that requires approval, but rather as a regular opportunity to ensure we’re heading in the right direction and solving problems in the best way possible.
+Sometimes we can get a bit too close to the detail to see the issues we need to address. A second opinion from someone we trust and respect can help validate our decisions, assumptions and designs. Explaining our solution to someone else often helps us better understand our own product. These independent reviews shouldn't be seen as a gate that requires approval, but rather as a regular opportunity to ensure we're heading in the right direction and solving problems in the best way possible.
 
-This also ensures we regularly review and update our architectural threat model and any other high-level artefacts to make sure they still represent what is being delivered. Over time, the product and context evolve \(e.g. more data, more users, change in business process, etc.\). If security controls don’t evolve alongside, hidden risks and threats can emerge in the product.
+This also ensures we regularly review and update our architectural threat model and any other high-level artefacts to make sure they still represent what is being delivered. Over time, the product and context evolve \(e.g. more data, more users, change in business process, etc.\). If security controls don't evolve alongside, hidden risks and threats can emerge in the product.
 
 It can be helpful to involve a Security Engineer in these reviews, as they can bring insight on security issues faced by other teams or in the wider industry that may have a bearing on the product.
 
@@ -393,7 +393,7 @@ Risk evolves over time as the product, context and risk appetite changes. Known 
 
 **Use code as evidence for auditors**
 
-Where you’re required to provide evidence to auditors for compliance \(e.g. PCI DSS\), use automated systems as evidence rather than creating separate documents that will get out of date. For example:
+Where you're required to provide evidence to auditors for compliance \(e.g. PCI DSS\), use automated systems as evidence rather than creating separate documents that will get out of date. For example:
 
 * Source control shows traceability of code and changes \(this can also be linked to change tracking systems such as Jira\)
 * Infrastructure-as-code combined with immutable infrastructure means that no changes can be made outside of that audit trail
@@ -407,7 +407,7 @@ When providing evidence in this form, it provides value to the delivery team as 
 
 **Automate infrastructure hardening**
 
-Hardening involves reducing the attack surface of your server infrastructure by removing components and privileges that you don’t need and securely configuring those that you do. It also means keeping up to date with the latest security patches that are relevant to your environment. Where appropriate, consider using cloud services that address many of the lower-level hardening requirements for you. Keep in mind, however, that using cloud services doesn’t entirely remove the need for infrastructure hardening, but it can reduce the amount of effort on your part.
+Hardening involves reducing the attack surface of your server infrastructure by removing components and privileges that you don't need and securely configuring those that you do. It also means keeping up to date with the latest security patches that are relevant to your environment. Where appropriate, consider using cloud services that address many of the lower-level hardening requirements for you. Keep in mind, however, that using cloud services doesn't entirely remove the need for infrastructure hardening, but it can reduce the amount of effort on your part.
 
 All infrastructure should be hardened according to vendor and industry guidelines, where available, including [CIS benchmarks](https://www.cisecurity.org/cis-benchmarks/) and product specific security guides \(e.g. AWS, Kubernetes, Docker, etc.\). Hardening should be applied to all infrastructure, including virtual machines, containers, language runtimes, and any cloud infrastructure / services that you may be using. For example, S3 buckets should be hardened to prevent accidental public access.
 
@@ -423,7 +423,7 @@ Examples:
 
 **Limit the blast radius of an attack**
 
-Segregation should be used to minimise the impact of an attack. Network & infrastructure segmentation limits the attacker’s ability to traverse laterally in the event of a compromise. Secret segmentation separates keys or credentials, limiting the impact when secrets are compromised and facilitating easy revocation and rotation.
+Segregation should be used to minimise the impact of an attack. Network & infrastructure segmentation limits the attacker's ability to traverse laterally in the event of a compromise. Secret segmentation separates keys or credentials, limiting the impact when secrets are compromised and facilitating easy revocation and rotation.
 
 Least privilege also ensures that a compromise is contained to a limited set of infrastructure. For example, an application should only have limited access to the database it needs to talk to. It should not have access to the entire database server, including other unrelated databases.
 
@@ -471,7 +471,7 @@ Links:
 
 It should only be possible to deploy software that has been produced through the pipeline, rather than allowing uncontrolled deployments that cannot be verified.
 
-The pipeline gives repeatability, traceability and an audit of all changes that have made all the way through to production. It ensures that all the necessary due diligence, such as security and functional testing, has been completed successfully to avoid issues being introduced into production. This is particularly important under emergency scenarios where there’s pressure to release rapid fixes, because this same pressure increases the chance of introducing vulnerabilities or defects.
+The pipeline gives repeatability, traceability and an audit of all changes that have made all the way through to production. It ensures that all the necessary due diligence, such as security and functional testing, has been completed successfully to avoid issues being introduced into production. This is particularly important under emergency scenarios where there's pressure to release rapid fixes, because this same pressure increases the chance of introducing vulnerabilities or defects.
 
 ### Security of the Pipeline
 
@@ -495,7 +495,7 @@ Pipelines require access to various external systems, such as source repositorie
 
 Wherever possible, avoid the need to manage secrets directly and use native platform features that handle this on your behalf. For example, cloud providers offer identity and access management features, such as AWS IAM and GCP Cloud Identity and Access Management, that enable workloads to be authorised while automatically handling key/credential rotation, auditing, etc.
 
-Within the pipeline, all secrets should be stored and managed securely, ideally using a [secrets management system](). Where it’s not possible to use a central secrets management system, it’s important to understand what controls are provided by the pipeline tools and their limitations.
+Within the pipeline, all secrets should be stored and managed securely, ideally using a [secrets management system](). Where it's not possible to use a central secrets management system, it's important to understand what controls are provided by the pipeline tools and their limitations.
 
 The principle of least privilege should be applied for secrets \(e.g. read only access to source control\). This includes using unique credentials for the build pipeline, so that it can be traced back if suspicious activity is detected.
 
@@ -505,7 +505,7 @@ Be aware that secrets may be accidentally or intentionally exposed via build log
 
 **Automate production vulnerability scanning**
 
-It’s beneficial to automatically review your public-facing product for deviations from security best practice. For example, TLS and other web security best practices are published and updated regularly by reputable organisations. Automatically scanning your public-facing site allows you to ensure that you are continually up-to-date with the latest practices. It also highlights issues that can easily go unnoticed, such as certificates that are due to expire soon.
+It's beneficial to automatically review your public-facing product for deviations from security best practice. For example, TLS and other web security best practices are published and updated regularly by reputable organisations. Automatically scanning your public-facing site allows you to ensure that you are continually up-to-date with the latest practices. It also highlights issues that can easily go unnoticed, such as certificates that are due to expire soon.
 
 This type of scanning is important because the infrastructure that hosts or exposes your product, such as Apigee, Akamai or AWS ELBs, may not have been included in your pipeline security scanning.
 
@@ -549,7 +549,7 @@ Penetration testing can more accurately simulate how a real attacker may try to 
 
 **Use bug bounties**
 
-Bug bounties provide an opportunity to discover vulnerabilities and weaknesses from independent security researchers based on a real attacker’s view of your product. Compared to penetration testing and purple team exercises, bug bounties allow independent evaluation of the security of the product from an outsider’s perspective.
+Bug bounties provide an opportunity to discover vulnerabilities and weaknesses from independent security researchers based on a real attacker's view of your product. Compared to penetration testing and purple team exercises, bug bounties allow independent evaluation of the security of the product from an outsider's perspective.
 
 Even when not operating bug bounties, you should use well known approaches, such as [security.txt](https://securitytxt.org/), to guide security researchers that want to report issues. This ensures you get early warning of issues and avoid lengthy delays while outsiders try to navigate your internal communication structures.
 
@@ -569,13 +569,13 @@ All systems that a team is responsible for should feed application and infrastru
 
 **Use intrusion detection**
 
-Application and infrastructure logs provide a rich set of data to operate the product, but don’t always highlight when patterns of behaviour resemble a potential security incident. Using intrusion detection tools increases your ability to spot and alert on suspicious behaviour as early as possible.
+Application and infrastructure logs provide a rich set of data to operate the product, but don't always highlight when patterns of behaviour resemble a potential security incident. Using intrusion detection tools increases your ability to spot and alert on suspicious behaviour as early as possible.
 
-When running in a cloud platform, it is valuable to consume the cloud provider’s native security monitoring services, such as [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) and [AWS GuardDuty](https://aws.amazon.com/guardduty/). In addition, other tools are available such as [Sysdig Secure](https://sysdig.com/products/secure/), [Sysdig Falco](https://sysdig.com/opensource/falco/), [Twistlock](https://www.twistlock.com/), [Aqua Security](https://www.aquasec.com/), [OSSEC](https://www.ossec.net/), [Osquery](https://osquery.io/), etc.
+When running in a cloud platform, it is valuable to consume the cloud provider's native security monitoring services, such as [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) and [AWS GuardDuty](https://aws.amazon.com/guardduty/). In addition, other tools are available such as [Sysdig Secure](https://sysdig.com/products/secure/), [Sysdig Falco](https://sysdig.com/opensource/falco/), [Twistlock](https://www.twistlock.com/), [Aqua Security](https://www.aquasec.com/), [OSSEC](https://www.ossec.net/), [Osquery](https://osquery.io/), etc.
 
 **Use honeypots for active detection**
 
-Sometimes it can be hard to separate out the signal from the noise, and it’s difficult to know for certain whether some activity was conducted maliciously. Honeypots, and various similar techniques, give you a strong indication of malicious behaviour as they involve setting up resources that would never be accessed or used under normal conditions. When honeypots are accessed or used, analysis of the attacker’s activity can be gathered to improve understanding of attacks and spot attacks against other normal resources. They also provide additional evidence to support legal proceedings.
+Sometimes it can be hard to separate out the signal from the noise, and it's difficult to know for certain whether some activity was conducted maliciously. Honeypots, and various similar techniques, give you a strong indication of malicious behaviour as they involve setting up resources that would never be accessed or used under normal conditions. When honeypots are accessed or used, analysis of the attacker's activity can be gathered to improve understanding of attacks and spot attacks against other normal resources. They also provide additional evidence to support legal proceedings.
 
 Numerous techniques can be used to lure attackers into traps that immediately alert you to their presence. Examples include decoy login or payment forms, fake nodes on the network that present themselves as potential targets for attack, and even entire networks that are exclusively used to detect attackers conducting network reconnaissance.
 

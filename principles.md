@@ -1,6 +1,6 @@
 # Principles
 
-Delivering secure software is about a lot more than just writing secure code. Security is not a product that can be purchased after development is complete, or a set of features that can be easily added on later: it’s an integral part of everything we build, balanced by risk.
+Delivering secure software is about a lot more than just writing secure code. Security is not a product that can be purchased after development is complete, or a set of features that can be easily added on later: it's an integral part of everything we build, balanced by risk.
 
 The following principles guide our everyday work and are the foundation of the practices we adopt.
 
@@ -10,9 +10,8 @@ The following principles guide our everyday work and are the foundation of the p
 
 A successful software security initiative depends on strong collaboration between everyone involved, including Security Engineering, product and delivery teams, together with support from senior management.
 
-_“Security is everyone’s job now, not just the security team’s. With continuous integration and continuous deployment, all developers have to be security engineers, we move too fast for there to be time for reviews by the security team beforehand.”_
-
-_- Werner Vogels \(CTO, Amazon\)_
+> Security is everyone's job now, not just the security team's. With continuous integration and continuous deployment, all developers have to be security engineers, we move too fast for there to be time for reviews by the security team beforehand.
+> - Werner Vogels \(CTO, Amazon\)
 
 ## Principle 2: Good Security is Continuous
 
@@ -27,7 +26,7 @@ In order to be effective, security should be a consideration during all activiti
 * Operations
 * Decommissioning
 
-This means that we consider the security implications of the work we’re doing throughout delivery, rather than leaving it to the end. [We practice constant verification, not wishful thinking](https://www.equalexperts.com/our-people/our-values/?=1). Applied to security, this means we build security in right from the start with tests to verify the quality of what we’ve delivered; we don’t wait for a penetration test or security review just before release and hope for the best. We take steps to ensure that - as much as is possible - every iteration of the software is subject to the right level of security review, enabling the continuous delivery of secure software that creates value as early as possible. We aim to have completed all relevant security testing by the point that a feature is functionally ready for deployment.
+This means that we consider the security implications of the work we're doing throughout delivery, rather than leaving it to the end. [We practice constant verification, not wishful thinking](https://www.equalexperts.com/our-people/our-values/?=1). Applied to security, this means we build security in right from the start with tests to verify the quality of what we've delivered; we don't wait for a penetration test or security review just before release and hope for the best. We take steps to ensure that - as much as is possible - every iteration of the software is subject to the right level of security review, enabling the continuous delivery of secure software that creates value as early as possible. We aim to have completed all relevant security testing by the point that a feature is functionally ready for deployment.
 
 ## Principle 3: Good Security is Contextual
 
@@ -48,10 +47,10 @@ We balance the need for security to reduce risk alongside other organisational n
 * Usability
 * Accessibility
 
-This doesn’t mean we satisfy one organisational need at the expense of the others. It means we find the best balance of all of the competing priorities in order to deliver the most suitable product for the organisation. Where we recommend or implement a tradeoff, the process by which we arrived at this is made clear so that the organisation is aware of the risks and expected impact.
+This doesn't mean we satisfy one organisational need at the expense of the others. It means we find the best balance of all of the competing priorities in order to deliver the most suitable product for the organisation. Where we recommend or implement a tradeoff, the process by which we arrived at this is made clear so that the organisation is aware of the risks and expected impact.
 
 ## Principle 4: Good Security is Cumulative
 
-Security is best achieved in layers. Don’t rely on a single practice or tool to meet all your security needs, but instead adopt multiple complementary practices and tools to provide layers of protection.
+Security is best achieved in layers. Don't rely on a single practice or tool to meet all your security needs, but instead adopt multiple complementary practices and tools to provide layers of protection.
 
 This ensures that if a single tool or process fails to identify a vulnerability, or a single control fails, there will be other layers of security to avoid compromise. No single tool, process or control provides complete security, which is why the cumulative effect of multiple layers of security is paramount.
