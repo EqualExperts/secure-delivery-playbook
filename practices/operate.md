@@ -2,7 +2,7 @@
 
 ## Environment Provisioning
 
-**Automate infrastructure hardening**
+### Automate infrastructure hardening
 
 Hardening involves reducing the attack surface of your server infrastructure by removing components and privileges that you don't need and securely configuring those that you do. It also means keeping up to date with the latest security patches that are relevant to your environment. Where appropriate, consider using cloud services that address many of the lower-level hardening requirements for you. Keep in mind, however, that using cloud services doesn't entirely remove the need for infrastructure hardening, but it can reduce the amount of effort on your part.
 
@@ -18,13 +18,13 @@ Examples:
 * Cloud tools \(e.g. [Turbot](https://turbot.com/), [Forseti Security](https://forsetisecurity.org/), [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/), [AWS Inspector](https://aws.amazon.com/inspector/), [Azure Security Centre](https://azure.microsoft.com/en-gb/services/security-center/), [GCP Cloud Security Command Center](https://cloud.google.com/security-command-center/), [ScoutSuite](https://github.com/nccgroup/ScoutSuite), etc.\)
 * Certificate validation \(e.g. [Qualys SSL Labs](https://www.ssllabs.com/ssltest/), etc.\)
 
-**Limit the blast radius of an attack**
+### Limit the blast radius of an attack
 
 Segregation should be used to minimise the impact of an attack. Network & infrastructure segmentation limits the attacker's ability to traverse laterally in the event of a compromise. Secret segmentation separates keys or credentials, limiting the impact when secrets are compromised and facilitating easy revocation and rotation.
 
 Least privilege also ensures that a compromise is contained to a limited set of infrastructure. For example, an application should only have limited access to the database it needs to talk to. It should not have access to the entire database server, including other unrelated databases.
 
-**Securely configure third-party products**
+### Securely configure third-party products
 
 Many software products are not secure by default. Out-of-the-box and quickstart guides and configurations will often lead an insecure system with easily-discovered vulnerabilities. Insecure configuration of software is one of the most common causes of system compromise, and can potentially lead to significant impact to the organisation. This has resulted in [Security Misconfiguration](https://github.com/OWASP/Top10/blob/master/2017/en/0xa6-security-misconfiguration.md) being included at position 6 in the OWASP Top 10 2017.
 
@@ -32,7 +32,7 @@ All software should be configured to enable security features such as authentica
 
 A good example is the easy discovery of [publicly exposed Jenkins servers](https://www.shodan.io/search?query=jenkins+200) on Shodan. Attackers use tools like this to discover likely easy targets, where default admin credentials will probably succeed.
 
-**Centralised and automated secret management**
+### Centralised and automated secret management
 
 We want to reduce the risk of compromised secrets, increase visibility of the use of secrets through auditing, and increase our ability to respond if secrets are compromised. Having a system that makes it easy to manage secrets means we can offer fine-grained secrets that also reduce the blast radius when a secret is compromised.
 
@@ -64,7 +64,7 @@ Links:
 * [Azure Key Vault](https://azure.microsoft.com/en-gb/services/key-vault/)
 * [LetsEncrypt](https://letsencrypt.org/)
 
-**Always deploy via the pipeline**
+### Always deploy via the pipeline
 
 It should only be possible to deploy software that has been produced through the pipeline, rather than allowing uncontrolled deployments that cannot be verified.
 
@@ -74,19 +74,19 @@ The pipeline gives repeatability, traceability and an audit of all changes that 
 
 The pipeline produces the product artefacts that are deployed into production. In order to trust that these artefacts have been correctly produced without vulnerabilities or malicious code being introduced, the security of the pipeline needs to be as good as the security of the product itself.
 
-**Harden the pipeline as a production system**
+### Harden the pipeline as a production system
 
 In addition to [infrastructure hardening](), build pipelines have unique characteristics that must be addressed in order to preserve their security. Failing to do this can lead to a compromise of the build system.
 
 For example, builds should not be allowed to run on Jenkins master nodes as this has [serious security implications](https://wiki.jenkins.io/display/JENKINS/Security+implication+of+building+on+master) and been used to compromise Jenkins administrator accounts in the past. Relevant security controls should be enabled and default user accounts should be changed on all pipeline systems. All build plugins should be carefully vetted to avoid introducing vulnerabilities in a [similar way to all product dependencies](). These should be kept up to date with the latest security patches.
 
-**Monitor the pipeline as a production system**
+### Monitor the pipeline as a production system
 
 Pipelines are production systems in their own right, and therefore warrant the same attention to monitoring and alerting as any live system would. Failing to do this prevents you from identifying anomalous behaviour \(such as failed login attempts, etc.\) and hinders your ability to investigate in the event of an incident.
 
 CI/CD pipelines should have a centralised logging and monitoring infrastructure in place that all components \(e.g. source control, build servers, artefact repositories, etc.\) feed into, so that suspicious behaviour can be detected and alerted on.
 
-**Manage secrets securely**
+### Manage secrets securely
 
 Pipelines require access to various external systems, such as source repositories, artefact repositories and target environments for deployment. This provides an attacker with the ability to control infrastructure or deployments, access secrets, or anything else involved in building, packaging and deploying code.
 
@@ -100,7 +100,7 @@ Be aware that secrets may be accidentally or intentionally exposed via build log
 
 ## Security Testing in Production
 
-**Automate production vulnerability scanning**
+### Automate production vulnerability scanning
 
 It's beneficial to automatically review your public-facing product for deviations from security best practice. For example, TLS and other web security best practices are published and updated regularly by reputable organisations. Automatically scanning your public-facing site allows you to ensure that you are continually up-to-date with the latest practices. It also highlights issues that can easily go unnoticed, such as certificates that are due to expire soon.
 
@@ -108,11 +108,11 @@ This type of scanning is important because the infrastructure that hosts or expo
 
 For example, [Mozilla Observatory](https://observatory.mozilla.org/), [Qualys SSL Labs](https://www.ssllabs.com/ssltest/) and [Hardenize](https://www.hardenize.com/) provide a score based on good web security practices. This can be automated to ensure your site continually provides the right level of protection for your users.
 
-**Automate production dependency checking**
+### Automate production dependency checking
 
 Even when dependency checking is performed on every build, the product running in production should be regularly scanned for newly-discovered vulnerabilities, because new vulnerabilities are being discovered every day.
 
-**Use chaos engineering**
+### Use chaos engineering
 
 Chaos engineering helps to identify vulnerabilities and weaknesses in a product by testing how the system behaves under failure or undesired conditions. It allows the delivery team to ensure compromises are detected and prevented, and whether additional security controls are required. It is important that the effectiveness of controls are observable to enable both controls and the understanding of risk to be improved over time.
 
@@ -126,7 +126,7 @@ Examples:
 * [Chaos Monkey](https://github.com/Netflix/SimianArmy/wiki/Chaos-Monkey)
 * [kube-monkey](https://github.com/asobti/kube-monkey)
 
-**Use purple team exercises**
+### Use purple team exercises
 
 Purple team exercises help to identify vulnerabilities and weaknesses in a product by simulating the behaviours and techniques of malicious attackers in the most realistic way possible. It allows the delivery team to ensure compromises are detected and prevented, and whether additional security controls are required. It is important that the effectiveness of controls are observable to enable both controls and the understanding of risk to be improved over time.
 
@@ -138,13 +138,13 @@ Examples:
 
 * [The Difference Between Red, Blue, and Purple Teams](https://danielmiessler.com/study/red-blue-purple-teams/)
 
-**Use penetration testing**
+### Use penetration testing
 
 Independent assessment of the security of the product through effective penetration testing enables validation of security controls and monitoring used to detect attempts to compromise the product. Having an independent assessment reduces the likelihood that issues will be missed due to bias or over-familiarity with the product. These types of assessments are a real measure of how well the risk appetite for the product has been met.
 
 Penetration testing can more accurately simulate how a real attacker may try to circumvent security controls, which makes them an invaluable addition to your security testing capabilities. They should be appropriately scoped to ensure maximum value and to avoid focusing on areas beyond the scope of the delivery team. While narrowly-scoped penetration tests can reduce time and improve focus, we should ensure that the test is conducted under realistic conditions. For example, testing multiple services in isolation will not reveal security issues that are only present when combining the services together as they would be in a real environment.
 
-**Use bug bounties**
+### Use bug bounties
 
 Bug bounties provide an opportunity to discover vulnerabilities and weaknesses from independent security researchers based on a real attacker's view of your product. Compared to penetration testing and purple team exercises, bug bounties allow independent evaluation of the security of the product from an outsider's perspective.
 
@@ -158,19 +158,19 @@ Examples:
 
 ## Detection & Response
 
-**Centralise monitoring and alerting**
+### Centralise monitoring and alerting
 
 Logging and monitoring provide visibility into the runtime behaviour of the product. Centralising logging and monitoring data makes it easier to understand and manage the product. It also makes it harder for an attacker to cover their tracks. Propagating relevant identifiers throughout logging and monitoring data ensures events can be accurately correlated, for example, for a user, virtual machine, session, request, etc.
 
 All systems that a team is responsible for should feed application and infrastructure logs into their centralised monitoring system, and alerts should be configured to notify the delivery team when exceptional behaviour occurs.
 
-**Use intrusion detection**
+### Use intrusion detection
 
 Application and infrastructure logs provide a rich set of data to operate the product, but don't always highlight when patterns of behaviour resemble a potential security incident. Using intrusion detection tools increases your ability to spot and alert on suspicious behaviour as early as possible.
 
 When running in a cloud platform, it is valuable to consume the cloud provider's native security monitoring services, such as [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) and [AWS GuardDuty](https://aws.amazon.com/guardduty/). In addition, other tools are available such as [Sysdig Secure](https://sysdig.com/products/secure/), [Sysdig Falco](https://sysdig.com/opensource/falco/), [Twistlock](https://www.twistlock.com/), [Aqua Security](https://www.aquasec.com/), [OSSEC](https://www.ossec.net/), [Osquery](https://osquery.io/), etc.
 
-**Use honeypots for active detection**
+### Use honeypots for active detection
 
 Sometimes it can be hard to separate out the signal from the noise, and it's difficult to know for certain whether some activity was conducted maliciously. Honeypots, and various similar techniques, give you a strong indication of malicious behaviour as they involve setting up resources that would never be accessed or used under normal conditions. When honeypots are accessed or used, analysis of the attacker's activity can be gathered to improve understanding of attacks and spot attacks against other normal resources. They also provide additional evidence to support legal proceedings.
 

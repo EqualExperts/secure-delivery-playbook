@@ -4,7 +4,7 @@
 
 This is an early opportunity to identify security requirements and areas of risk before development gets underway. The main objective of inception is to de-risk delivery. Inception should include the delivery team and stakeholders to ensure everyone understands the part they play in delivering a secure product.
 
-**Agree on risk appetite**
+### Agree on risk appetite
 
 Security should be balanced against other competing concerns, such as usability or time to market. It is important to understand the importance of security for the product being developed. For example, a payments system may require much higher security than a company blog. Security is important in both of these products, but the context determines how much risk the organisation is willing to accept.
 
@@ -16,31 +16,31 @@ A process that can be used to manage risk appetite is:
 2. [Threat modelling](https://en.wikipedia.org/wiki/Threat_model) to understand what controls are likely to ensure the risk appetite is met
 3. [Measurement]() to understand whether the risk has been adequately addressed and to adapt the threat model and required controls as needed
 
-**Agree on roles & responsibilities**
+### Agree on roles & responsibilities
 
 It is important to establish early on who is ultimately responsible for the security of the product. In some environments, the Product Owner is fully accountable and responsible for all aspects of it, but in other environments the central security team retains responsibility.
 
 Knowing this at the start of the delivery will ensure that the team understands who has the authority to make decisions about security trade-offs and who approves production deployments. Ideally, the Product Owner should have full responsibility for both the features and the security of the product, as they have the full knowledge of the product to make trade-offs on behalf of the organisation.
 
-**Understand the shared responsibility model**
+### Understand the shared responsibility model
 
 The team should understand the shared responsibility model between the product and any services they're using, whether they're internal services \(e.g. a centrally managed Kubernetes cluster or PaaS\) or external cloud services.
 
 The overall accountability for security of the product falls on the delivery team. They're accountable for ensuring any services they rely on meet their security needs, even those they're not responsible for. For example, the delivery team may be accountable for their choice of cloud provider, even though they're not responsible for implementing the cloud provider's data-center security controls. Where it's not clear under a shared responsibility model that a particular area is being covered \(e.g. VM hardening\), the team needs to take ownership to ensure that is covered. This ensures the team is aware of their responsibilities for securing the product and the need to ensure these responsibilities are assigned within the team. If any of the responsibilities can't be assigned within the roles in the delivery team, the team should be fully supported by Security Engineering so it can deliver the expected level of security.
 
-**Produce an architectural threat model**
+### Produce an architectural threat model
 
 Threat modelling is a useful activity for examining what we're going to build and what could go wrong. This should begin during inception, before any software has been built, and [continue throughout the life of the product](). Threat modelling helps to identify areas of risk, and consequently the potential controls or design changes that the organisation feels are needed. This brings security issues to light early on, allowing them to be more easily factored into architectural decisions before they've been implemented.
 
 The architectural threat model provides an overview of the high-level threats and risks for the whole product. There's value in keeping this up to date as the architecture evolves, so that the overall product risk can be easily understood and managed.
 
-**Include security in Definition of Done**
+### Include security in Definition of Done
 
 A Definition of Done \(DoD\) allows everyone to share a common view of what it means to complete a story. The most effective way to produce secure software is to make it secure from the start. Including security aspects in your DoD ensures that security is built in, rather than being bolted on later \(or not at all\).
 
 The delivery team should agree how they will include security in their DoD. For example, security requirements implemented and covered by passing automated tests.
 
-**Explicitly identify security requirements**
+### Explicitly identify security requirements
 
 Threat models are helpful to identify areas of risk within the product we're building and the controls required to address these risks. However, this alone is insufficient as it doesn't capture external influences such as organisational policy or legislation. For example, data retention requirements wouldn't likely be highlighted by a threat model, but are often required for compliance with internal policies or legislation such as GDPR.
 
@@ -53,13 +53,13 @@ Examples:
 
 ## Stories & Epics
 
-**Consider security needs on every story or epic**
+### Consider security needs on every story or epic
 
 The Security Champion should be actively involved in defining security needs within user stories. Security Champions should help the team define the security acceptance criteria and engage with Security Engineers for more specialist support when required. For example, implementing features using cryptography may require assistance or review from a Security Engineer. Consideration should be given to defining sufficient test cases to meet the security needs, e.g. ensuring an unauthenticated user is not able to access protected functionality. Consideration should also be given to whether any known risks for the product are impacted by this change, which should be updated as appropriate.
 
 The Security Champion should be responsible for ensuring that security is considered for every story. This is an opportunity for Security Champions to develop their knowledge and experience with assistance from Security Engineers, and will gradually make the delivery team more independent. It will also help the Security Engineers to focus their time on the most critical or complex cases where specialist support is needed.
 
-**Iterative and incremental threat modelling**
+### Iterative and incremental threat modelling
 
 We should do threat modelling whenever there's a significant change to the product. When creating epics and stories, we must consider whether the architectural threat model needs to be updated or whether there needs to be a specific threat model created for this change. The objective is to identify whether any security controls need to change or be added to maintain the security of the product.
 
@@ -67,7 +67,7 @@ Creating threat models in response to each change ensures the activity is focuse
 
 Also consider whether any known risks for the product are impacted by this change, and update the risks as appropriate.
 
-**Security Engineers should review security-critical changes**
+### Security Engineers should review security-critical changes
 
 Some code has a higher impact on the security of the product, such as code handling authentication. In addition, some changes are more complex and require specialist experience to ensure it is secure, such as cryptography. Defining sufficient test cases can be difficult, and often benefits from having someone with security experience available to help.
 
@@ -75,13 +75,13 @@ Sections of security-critical code should be reviewed by experienced Security En
 
 ## Security in the Pipeline
 
-**Avoid using sensitive production data in test environments**
+### Avoid using sensitive production data in test environments
 
 Often the easiest way of obtaining a set of representative test data is to take a copy of a production database. When we use a copy of sensitive production in a test environment, this environment needs the same level of security controls as the environment where it was designed to be stored. These controls increase the financial and operational cost of running a test environment, which is why it's often significantly cheaper and easier to operate a system with fake or reliably anonymised test data.
 
 When integrating with third parties that don't provide a test environment or test accounts, suitable controls need to be put in place to ensure that access to that data is adequately protected. Ideally, a requirement should be raised for the third party to provide either a test environment or a test account that does not expose sensitive data.
 
-**Avoid leaking sensitive data in source control**
+### Avoid leaking sensitive data in source control
 
 The delivery team should be trained to ensure that commits do not contain sensitive data. In addition, commits should be reviewed for sensitive data, ideally before the commit is pushed to a central repository. Consider using pre-commit hooks that automatically detect sensitive data to avoid this data entering source control systems. Alternatively, there are numerous tools available that scan popular source control systems for sensitive data such as API keys, credentials, private keys, etc.
 
@@ -95,26 +95,26 @@ Examples:
 * [truffleHog](https://github.com/dxa4481/truffleHog)
 * [GitHub Token Scanning](https://help.github.com/en/articles/about-token-scanning)
 
-**Adopt the two-person rule**
+### Adopt the two-person rule
 
 A person contributing to a product in isolation increases the opportunity for accidental or malicious vulnerabilities to be introduced.
 
 Teams should adopt the two-person rule, meaning that two or more people are involved in making each change. This can be achieved ideally through pair programming or a code review i.e. via pull requests. This reduces the chance for errors, and increases the difficulty to introduce intentional damage because collusion would be required.
 
-**Treat security tests like functional tests**
+### Treat security tests like functional tests
 
 When building any product feature, we always write accompanying tests to prove that the feature works correctly and is protected from regression. This applies equally to security features and controls, for example:
 
 * Unit tests confirming input validation is correct and covers all cases
 * Integration tests ensuring a protected feature requires valid authorisation
 
-**Builds should be isolated from each other**
+### Builds should be isolated from each other
 
 To ensure that builds are repeatable and their dependencies come from known good locations, they should be isolated from each other and prevented from sharing state. For example, this can be achieved using ephemeral build slaves or running builds within independent Docker containers.
 
 When a build is based on some shared state \(e.g. local Maven cache\), it's possible that a previous build or anyone with access to the build server can pollute the Maven cache with malicious code that could then be packaged into your artefact.
 
-**Security analysis on every build**
+### Security analysis on every build
 
 Continuous Integration / Continuous Delivery \(CI/CD\) pipelines provide a good opportunity to detect potential security vulnerabilities early in development by integrating with security analysis tools. There are numerous open source and commercial products covering a wide variety of languages and frameworks, and it's possible to write custom tools based on your own needs. These tools can be applied to application code, configuration files, Dockerfiles, Infrastructure-as-Code, and running applications.
 
@@ -177,13 +177,13 @@ Examples:
 * [Sonatype](https://www.sonatype.com/)
 * [Clair](https://github.com/coreos/clair)
 
-**Ensure availability and consistency of artefacts**
+### Ensure availability and consistency of artefacts
 
 Delivery teams produce a number of different types of artefacts that need to be deployed. It is important to ensure that the artefacts are available to be deployed on demand. This reduces the likelihood of downtime and ensures we can recover from failure.
 
 It's also important to ensure that the same artefact is consistently deployable across different environments: for example, we should only deploy the exact artefact that was tested, and not a separately built copy of the artefact. This guarantees that any dependencies have not changed since the artefact was tested \(e.g. when depending on ‘latest' versions\).
 
-**Ensure provenance of first-party artefacts**
+### Ensure provenance of first-party artefacts
 
 We need to reliably establish that any deployed artefact or dependency has been produced by the delivery team. Establishing provenance in this way avoids malicious or otherwise vulnerable code from being introduced into the product. There are many ways to achieve this depending on the environment.
 
@@ -191,7 +191,7 @@ One popular approach is to use a secure, central repository with strong access c
 
 Another approach is to sign artefacts and verify these signatures whenever an artefact is pulled from the repository. This can be taken a step further with GPG signed commits, ensuring traceability back to the individual that committed the code.
 
-**Establish provenance of third-party components**
+### Establish provenance of third-party components
 
 Using third-party components is essential in software delivery. However, this can potentially introduce vulnerabilities.
 
@@ -204,7 +204,7 @@ Examples of where this has caused problems:
 * [Ruby rest-client](https://github.com/rest-client/rest-client/issues/713)
 * [Npm event-stream](https://snyk.io/blog/malicious-code-found-in-npm-package-event-stream/)
 
-**Automate pipeline progression based on policy**
+### Automate pipeline progression based on policy
 
 As we begin to introduce security checks into the pipeline, it's important that we know when to fail the build and when to allow it through. This requires an up-front decision about policy and ensuring that the security checks are configured to meet that policy.
 
@@ -216,7 +216,7 @@ Automating these policies helps direct delivery teams towards the issues they ar
 
 ## Periodic Review
 
-**Get an independent perspective on the product delivery**
+### Get an independent perspective on the product delivery
 
 Sometimes we can get a bit too close to the detail to see the issues we need to address. A second opinion from someone we trust and respect can help validate our decisions, assumptions and designs. Explaining our solution to someone else often helps us better understand our own product. These independent reviews shouldn't be seen as a gate that requires approval, but rather as a regular opportunity to ensure we're heading in the right direction and solving problems in the best way possible.
 
@@ -224,11 +224,11 @@ This also ensures we regularly review and update our architectural threat model 
 
 It can be helpful to involve a Security Engineer in these reviews, as they can bring insight on security issues faced by other teams or in the wider industry that may have a bearing on the product.
 
-**Review known risks**
+### Review known risks
 
 Risk evolves over time as the product, context and risk appetite changes. Known risks should be regularly reviewed to ensure they are still within the agreed risk appetite. Even risks that have previously been accepted should be reviewed to ensure the basis for their acceptance is still valid.
 
-**Use code as evidence for auditors**
+### Use code as evidence for auditors
 
 Where you're required to provide evidence to auditors for compliance \(e.g. PCI DSS\), use automated systems as evidence rather than creating separate documents that will get out of date. For example:
 
