@@ -16,4 +16,8 @@
     * [Security in the Pipeline]([practices/build/security-in-the-pipeline.md)
     * [Periodic Review]([practices/build/periodic-review.md)
   * [Operate](practices/operate.md)
+    * [Environment Provisioning](practices/operate/environment-provisioning.md)
+    * [Security of the Pipeline](practices/operate/security-of-the-pipeline.md)
+    * [Security Testing in Production](practices/operate/security-testing-in-production.md)
+    * [Detection & Response](practices/operate/detection-and-response.md)
 * [Contributors](contributors.md)
