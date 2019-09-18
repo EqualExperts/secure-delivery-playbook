@@ -55,7 +55,7 @@ The best security engineers are software security people, but software security 
 Security engineers come in a variety of shapes and sizes. All good security engineering teams include both people with deep coding experience and people with architectural experience. Software security can't only be about finding specific bugs such as the OWASP Top Ten. Code review is an important best practice, and to perform code review you must actually understand code \(not to mention the huge piles of security bugs\). However, the best code reviewers sometimes make poor software architects, and asking them to perform an architecture risk analysis will only result in blank stares. Make sure you cover architectural capabilities in your security engineering team in the same way that you cover code. Finally, a security engineer is often asked to mentor, train, and work directly with hundreds of developers. Communications skills, teaching capability, and consulting practical knowledge are must-haves for at least a portion of the security engineering team.
 
 {% hint style="info" %}
-Our description of a Security Engineer is based significantly on what [BSIMM](https://www.bsimm.com/) defines as a _Software Security Group_. We have made some minor changes to better align with our terminology and culture.
+Our description of a Security Engineer is based on what [BSIMM](https://www.bsimm.com/) defines as a _Software Security Group_. We have made some minor changes to better align with our terminology and culture.
 {% endhint %}
 
 ### Security Champions
