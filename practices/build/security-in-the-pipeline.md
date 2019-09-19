@@ -43,7 +43,7 @@ When a build is based on some shared state \(e.g. local Maven cache\), it's poss
 
 Continuous Integration / Continuous Delivery \(CI/CD\) pipelines provide a good opportunity to detect potential security vulnerabilities early in development by integrating with security analysis tools. There are numerous open source and commercial products covering a wide variety of languages and frameworks, and it's possible to write custom tools based on your own needs. These tools can be applied to application code, configuration files, Dockerfiles, Infrastructure-as-Code, and running applications.
 
-Results from these tests should [feed into the software catalogue]() to promote visibility and ensure that security vulnerabilities are being responded to in a timely manner.
+Results from these tests should [feed into the software catalogue](/practices/organise/intelligence.md#make-security-visible-in-the-software-catalogue) to promote visibility and ensure that security vulnerabilities are being responded to in a timely manner.
 
 Some tools include threat intelligence data, which provides an indication of how potential vulnerabilities / weaknesses are being used in the wild. This data therefore provides a useful mechanism to further prioritise the resolution of identified vulnerabilities.
 

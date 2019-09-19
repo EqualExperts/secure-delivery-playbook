@@ -4,9 +4,9 @@ The pipeline produces the product artefacts that are deployed into production. I
 
 ## Harden the pipeline as a production system
 
-In addition to [infrastructure hardening](), build pipelines have unique characteristics that must be addressed in order to preserve their security. Failing to do this can lead to a compromise of the build system.
+In addition to [infrastructure hardening](environment-provisioning.md#automate-infrastructure-hardening), build pipelines have unique characteristics that must be addressed in order to preserve their security. Failing to do this can lead to a compromise of the build system.
 
-For example, builds should not be allowed to run on Jenkins master nodes as this has [serious security implications](https://wiki.jenkins.io/display/JENKINS/Security+implication+of+building+on+master) and been used to compromise Jenkins administrator accounts in the past. Relevant security controls should be enabled and default user accounts should be changed on all pipeline systems. All build plugins should be carefully vetted to avoid introducing vulnerabilities in a [similar way to all product dependencies](). These should be kept up to date with the latest security patches.
+For example, builds should not be allowed to run on Jenkins master nodes as this has [serious security implications](https://wiki.jenkins.io/display/JENKINS/Security+implication+of+building+on+master) and been used to compromise Jenkins administrator accounts in the past. Relevant security controls should be enabled and default user accounts should be changed on all pipeline systems. All build plugins should be carefully vetted to avoid introducing vulnerabilities in a [similar way to all product dependencies](/practices/build/security-in-the-pipeline.md#establish-provenance-of-third-party-components). These should be kept up to date with the latest security patches.
 
 ## Monitor the pipeline as a production system
 
@@ -20,7 +20,7 @@ Pipelines require access to various external systems, such as source repositorie
 
 Wherever possible, avoid the need to manage secrets directly and use native platform features that handle this on your behalf. For example, cloud providers offer identity and access management features, such as AWS IAM and GCP Cloud Identity and Access Management, that enable workloads to be authorised while automatically handling key/credential rotation, auditing, etc.
 
-Within the pipeline, all secrets should be stored and managed securely, ideally using a [secrets management system](). Where it's not possible to use a central secrets management system, it's important to understand what controls are provided by the pipeline tools and their limitations.
+Within the pipeline, all secrets should be stored and managed securely, ideally using a [secrets management system](/practices/operate/environment-provisioning.md#centralised-and-automated-secret-management). Where it's not possible to use a central secrets management system, it's important to understand what controls are provided by the pipeline tools and their limitations.
 
 The principle of least privilege should be applied for secrets \(e.g. read only access to source control\). This includes using unique credentials for the build pipeline, so that it can be traced back if suspicious activity is detected.
 
