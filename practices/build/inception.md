@@ -12,7 +12,7 @@ A process that can be used to manage risk appetite is:
 
 1. Stakeholders should identify the level of risk acceptable to them, ideally quantitatively
 2. [Threat modelling](https://en.wikipedia.org/wiki/Threat_model) to understand what controls are likely to ensure the risk appetite is met
-3. [Measurement]() to understand whether the risk has been adequately addressed and to adapt the threat model and required controls as needed
+3. [Measurement](../operate/detection-and-response.md) to understand whether the risk has been adequately addressed and to adapt the threat model and required controls as needed
 
 ## Agree on roles & responsibilities
 
@@ -28,7 +28,7 @@ The overall accountability for security of the product falls on the delivery tea
 
 ## Produce an architectural threat model
 
-Threat modelling is a useful activity for examining what we're going to build and what could go wrong. This should begin during inception, before any software has been built, and [continue throughout the life of the product](). Threat modelling helps to identify areas of risk, and consequently the potential controls or design changes that the organisation feels are needed. This brings security issues to light early on, allowing them to be more easily factored into architectural decisions before they've been implemented.
+Threat modelling is a useful activity for examining what we're going to build and what could go wrong. This should begin during inception, before any software has been built, and [continue throughout the life of the product](stories-and-epics.md#iterative-and-incremental-threat-modelling). Threat modelling helps to identify areas of risk, and consequently the potential controls or design changes that the organisation feels are needed. This brings security issues to light early on, allowing them to be more easily factored into architectural decisions before they've been implemented.
 
 The architectural threat model provides an overview of the high-level threats and risks for the whole product. There's value in keeping this up to date as the architecture evolves, so that the overall product risk can be easily understood and managed.
 
