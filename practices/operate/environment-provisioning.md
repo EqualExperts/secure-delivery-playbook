@@ -67,3 +67,4 @@ Links:
 It should only be possible to deploy software that has been produced through the pipeline, rather than allowing uncontrolled deployments that cannot be verified.
 
 The pipeline gives repeatability, traceability and an audit of all changes that have made all the way through to production. It ensures that all the necessary due diligence, such as security and functional testing, has been completed successfully to avoid issues being introduced into production. This is particularly important under emergency scenarios where there's pressure to release rapid fixes, because this same pressure increases the chance of introducing vulnerabilities or defects.
+

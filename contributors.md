@@ -11,3 +11,4 @@ This document was produced by a number of people within the [Equal Experts netwo
 * [Chris Rutter](https://www.linkedin.com/in/chris-rutter-1b74a8b0/)
 * [Gerald Benischke](https://www.linkedin.com/in/gerald-benischke-9811b663/)
 * [Katarzyna Kittel](https://www.linkedin.com/in/kasiakittel/)
+

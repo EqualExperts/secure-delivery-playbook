@@ -11,7 +11,8 @@ The following principles guide our everyday work and are the foundation of the p
 A successful software security initiative depends on strong collaboration between everyone involved, including Security Engineering, product and delivery teams, together with support from senior management.
 
 > Security is everyone's job now, not just the security team's. With continuous integration and continuous deployment, all developers have to be security engineers, we move too fast for there to be time for reviews by the security team beforehand.
-> - Werner Vogels \(CTO, Amazon\)
+>
+> * Werner Vogels \(CTO, Amazon\)
 
 ## Good Security is Continuous
 
@@ -54,3 +55,4 @@ This doesn't mean we satisfy one organisational need at the expense of the other
 Security is best achieved in layers. Don't rely on a single practice or tool to meet all your security needs, but instead adopt multiple complementary practices and tools to provide layers of protection.
 
 This ensures that if a single tool or process fails to identify a vulnerability, or a single control fails, there will be other layers of security to avoid compromise. No single tool, process or control provides complete security, which is why the cumulative effect of multiple layers of security is paramount.
+

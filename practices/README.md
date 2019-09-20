@@ -6,7 +6,7 @@ The practices in this guide have been divided into three areas: Organise, Build 
 
 **Build** and **Operate** practices are owned by the product delivery team and focus on security activities during development and live operations of the product.
 
-![](images/organise-build-operate.png)
+![](../.gitbook/assets/organise-build-operate.png)
 
 ## Where do I start?
 
@@ -17,3 +17,4 @@ The best approach is to start with the practices that have high impact and low e
 **Effort:** To understand the effort of a practice, we must understand the context of the product delivery. This includes: the technologies used in the product, the delivery team's skill and experience, the level of automation in the deployment pipeline and other teams involved in the delivery process \(e.g. change control\).
 
 The best approach is to deliver the practices in the smallest possible incremental steps that provide immediate feedback. This approach provides immediate measurable value and is also useful to build confidence and demonstrate how improvements can be easily delivered without large expense.
+

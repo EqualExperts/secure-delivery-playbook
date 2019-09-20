@@ -11,3 +11,4 @@ The practices defined are technology and vendor agnostic, allowing each team to 
 ## Who's this playbook for?
 
 We've created this playbook to help teams work together to deliver secure software. It's not just for software engineers; it is for everyone involved in delivering software. It's also not prescriptive about how each of the practices should be adopted, but allows you to determine which practices are appropriate for you and the best way to implement them.
+

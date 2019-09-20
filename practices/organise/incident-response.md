@@ -15,3 +15,4 @@ Links:
 When a security incident arises, teams across the organisation should collaborate openly and share information to ensure the incident is responded to quickly and effectively. When this is centrally managed by a single team \(e.g. Security Engineering\) and there is no engagement with the delivery team, the effectiveness of the response is reduced and the time to resolve the incident is increased.
 
 Engaging the delivery team is an important opportunity to learn and improve the security of future product delivery. We should use blameless post-mortems to share learnings more widely within the organisation. A culture of open information sharing around security incidents will lead to greater risk reduction to the organisation, as teams are better informed and motivated to avoid similar incidents in the future.
+

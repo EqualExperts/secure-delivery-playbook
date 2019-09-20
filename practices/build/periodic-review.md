@@ -21,3 +21,4 @@ Where you're required to provide evidence to auditors for compliance \(e.g. PCI 
 * Deployments / build tools can provide an audit of changes to production
 
 When providing evidence in this form, it provides value to the delivery team as well as auditors \(e.g. Terraform scripts that show firewall configuration for PCI DSS\). This avoids creating lengthy documents that require continual effort to maintain, and instead relies on code that defines the way the system works. This also avoids contradiction between what the documentation says and what happens in reality.
+

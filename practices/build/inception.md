@@ -12,7 +12,7 @@ A process that can be used to manage risk appetite is:
 
 1. Stakeholders should identify the level of risk acceptable to them, ideally quantitatively
 2. [Threat modelling](https://en.wikipedia.org/wiki/Threat_model) to understand what controls are likely to ensure the risk appetite is met
-3. [Measurement](/practices/operate/detection-and-response.md) to understand whether the risk has been adequately addressed and to adapt the threat model and required controls as needed
+3. [Measurement](../operate/detection-and-response.md) to understand whether the risk has been adequately addressed and to adapt the threat model and required controls as needed
 
 ## Agree on roles & responsibilities
 
@@ -48,3 +48,4 @@ Examples:
 
 * [OWASP Application Security Verification Standard \(ASVS\)](https://github.com/OWASP/ASVS)
 * [Core Infrastructure Initiative Best Practices Criteria](https://github.com/coreinfrastructure/best-practices-badge/blob/master/doc/criteria.md#security)
+

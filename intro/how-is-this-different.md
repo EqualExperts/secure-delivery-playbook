@@ -29,3 +29,4 @@ The [Linux Foundation Core Infrastructure Initiative Best Practices](https://bes
 We've found resources like this to be helpful for determining whether the practices we adopt are inline with industry norms, and whether new practices have emerged that we should consider including in our own projects.
 
 However, the Secure Delivery Playbook is not a scoring system and will not earn you an independently verifiable badge. We choose not to be prescriptive, but instead to provide guidance that allows teams to select which practices are most suitable in their context. This also ensures teams think about the practices critically and with an eye on business value, rather than being influenced to achieve a silver or gold badge.
+

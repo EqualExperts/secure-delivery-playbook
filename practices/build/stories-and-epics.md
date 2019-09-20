@@ -19,3 +19,4 @@ Also consider whether any known risks for the product are impacted by this chang
 Some code has a higher impact on the security of the product, such as code handling authentication. In addition, some changes are more complex and require specialist experience to ensure it is secure, such as cryptography. Defining sufficient test cases can be difficult, and often benefits from having someone with security experience available to help.
 
 Sections of security-critical code should be reviewed by experienced Security Engineers. It is possible to integrate this into source control to prevent security-critical code from being merged until it has been reviewed, for example by tagging associated stories. Alternatively, this can also be achieved by having a good close working relationship with Security Engineers so they are aware and available to help when needed.
+

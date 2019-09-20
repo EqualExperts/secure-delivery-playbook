@@ -16,3 +16,4 @@ Examples:
 Delivery teams don't always have the experience or skills required to address more specialist areas of security. This leads to suboptimal solutions or increased risk or complexity. Security Engineering should provide specialists in order to assist delivery teams when the team lacks the skills to complete a particular feature \(for example when implementing features that require cryptography\).
 
 Security Engineering should also be available to conduct or facilitate threat modelling sessions, and use this as an opportunity to teach this skill to others.
+

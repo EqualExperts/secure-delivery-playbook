@@ -19,3 +19,4 @@ Examples of other companies that have done this publicly:
 * [Homebrew GitHub personal access token leak](https://brew.sh/2018/08/05/security-incident-disclosure/)
 * [Parity hacked via security bug introduced during refactoring](https://www.parity.io/the-multi-sig-hack-a-postmortem/)
 * [Insider bitcoin theft from ShapeShift](http://moneyandstate.com/looting-of-the-fox/)
+
