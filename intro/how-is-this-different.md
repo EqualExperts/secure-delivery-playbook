@@ -1,4 +1,4 @@
-# How is this different to... ?
+# How is this different?
 
 The practices in this playbook have focused on ensuring the important principles are achieved without being too low level or prescriptive. This ensures they can be applied across a wide range of environments and technologies, and are more resilient to the changes in the way we deliver and operate software. We have avoided using a scoring system, which can be manipulated or become the objective, so that the focus is on secure software.
 
