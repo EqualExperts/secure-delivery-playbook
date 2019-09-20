@@ -5,4 +5,3 @@ The Equal Experts Secure Delivery Playbook is a distillation of our thinking on 
 To help explain some of the concepts in this playbook, we've created the following visual representation of how the various practices work together.
 
 ![](.gitbook/assets/organise-build-operate.png)
-
