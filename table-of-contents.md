@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Introduction](intro.md)
+  * [How is this different to...?](intro/how-is-this-different.md)
+  * [Security Engineers and Security Champions](intro/security-engineers-and-security-champions.md)
 * [Principles](principles.md)
 * [Practices](practices.md)
   * [Organise](practices/organise.md)
