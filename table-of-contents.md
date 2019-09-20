@@ -23,5 +23,7 @@
     * [Security of the Pipeline](practices/operate/security-of-the-pipeline.md)
     * [Security Testing in Production](practices/operate/security-testing-in-production.md)
     * [Detection & Response](practices/operate/detection-and-response.md)
-* [Contributors](contributors.md)
+* [Contribute](contribute/README.md)
+    * [Contributors](contribute/contributors.md)
+    * [How to contribute](contribute/how-to-contribute.md)
 
