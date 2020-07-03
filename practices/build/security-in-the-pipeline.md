@@ -84,6 +84,7 @@ Interactive security testing is possibly the most valuable form of testing to co
 Examples:
 
 * [Contrast Security](https://www.contrastsecurity.com/)
+* [Cryptosense Analyzer](https://cryptosense.com/analyzer/)
 
 **Dependency checking**
 
