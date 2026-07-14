@@ -18,7 +18,7 @@ Security Champions are essential to scale security effectively. The ratio of sec
 
 To quote [Mozilla](https://wiki.mozilla.org/Security/Champions):
 
-* Security Champions are active members of a team that make help to make decisions about when to engage the Security Team
+* Security Champions are active members of a team that help to make decisions about when to engage the Security Team
 * Act as the "voice" of security for the given product or team
 * Assist in the triage of security bugs for their team or area
 
